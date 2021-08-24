@@ -1,0 +1,67 @@
+---
+title: "Data Science with R Programming"
+author: "Sachin Sharma"
+date: "August 24, 2021"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r}
+
+library(tidyverse)
+library(datasets)
+library(nycflights13)
+head(flights)
+```
+
+### * int stan?s for integers.
+### * dbl stands for doubles, or real numbers.
+### * chr stands for character vectors, or strings.
+### * dttm stands for date-times (a date + a time).
+### * lgl stands for logical, vectors that contain only TRUE or FALSE.
+### * fctr stands ?or factors, which R uses to represent categorical variables with fixed possible values.
+### * date stands for dates.
+
+## dplyr Basics
+### We are going to learn the five key dplyr functions that allow you to solve the vast majority of your data-manipulation?challenges:
+### .  Pick observations by their values **(filter())**.
+### .  Reorder the rows **(arrange())**.
+### .  Pick variables by their names **(select())**.
+### .  Create new variables with functions of existing variables **(mutate())**.
+### .  Colla?se many values down to a single summary **(summarize())**.
+
+## These can all be used in conjunction with **group_by()**, which changes the scope of each function from operating on the entire dataset to operating on it group-by-group.
+
+## Filter Rows with f?lter()
+**filter() allows you to subset observations based on their values.**
+
+
+
+
+```{r cars}
+filter(flights, month == 1, day == 1)
+
+```
+
+## To save this data you can use a variable.
+
+```{r }
+
+df_1 =filter(flights, month == 1, day == 1)
+print(df_1)
+
+```
+## ?n the above case you need to print the variable name after that you get the ouput , you can do it simultaneously by using the following code line : 
+
+```{r }
+(df_1 =filter(flights, month == 1, day == 1))
+```
+# Comparisons
+## If you want to use filtering ef?ectively, you should know how to select the observations by using correct comparison operators viz : >, >=, <, <=, != (not equal), and == (equal).
+
+## Logical Operators
+### & is "and," | is "or," and ! is "not."
+
+
+
